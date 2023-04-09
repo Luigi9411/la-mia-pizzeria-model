@@ -1,3 +1,17 @@
 ﻿@model Pizza
 
-<p>Detail</p>
+@{
+    var pizza = Model;
+}
+
+<div class="d-flex justify-content-center">
+    <div  style="width: 18rem; height: 25rem;">
+            <h2 class="text-center">@pizza.Name</h2>
+        <img src="@pizza.Image" class="card-img-top" alt="Americana" style="height: 12rem;">
+        <div class="card-body">
+            <h6>Descrizione:<div>@pizza.Description</div> </h6>
+            <h6 >Prezzo: @pizza.Price $</h6>
+        </div>
+    </div>
+</div>
+

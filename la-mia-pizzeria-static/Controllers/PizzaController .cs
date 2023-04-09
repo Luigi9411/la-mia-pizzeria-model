@@ -21,6 +21,11 @@ namespace la_mia_pizzeria_static.Controllers
 
             var pizza = ctx.Pizzas.Find(id);
 
+            if (pizza is null)
+            {
+                return NotFound($"L'id {id} della pizza non è stato trovato");
+            }
+
             return View(pizza);
         }
     }
